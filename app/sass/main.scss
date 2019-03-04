@@ -1,0 +1,154 @@
+/*********************
+*breakpoints
+***********************/
+$XS:    420px;
+$S:     480px;
+$M:     769px;
+$ML:	940px;
+$L:     1200px;
+$maxL:    $L + 1px;
+/*********************
+color
+***********************/
+$theme-color:#37474F;
+
+// media queries
+@mixin MQ($canvas) {
+	@if $canvas==XS {
+		@media only screen and (max-width: $XS) {
+			@content;
+		}
+	}
+	@if $canvas==S {
+		@media only screen and (max-width: $S) {
+			@content;
+		}
+	}
+	@else if $canvas==M {
+		@media only screen and (max-width: $M) {
+			@content;
+		}
+	}
+	@else if $canvas==ML {
+		@media only screen and (max-width: $ML) {
+			@content;
+		}
+	}
+	@else if $canvas==L {
+		@media only screen and (max-width: $L) {
+			@content;
+		}
+	}
+	@else if $canvas==maxL {
+		@media only screen and (min-width: $maxL) {
+			@content;
+		}
+	}
+}
+
+.yushi-nav-bar{
+    float:right;
+    margin-right:20%;
+    color:$theme-color;
+    .yushi-nav-bar-nav{
+        position:relative;
+        left:15%;
+        top:10%;
+        display: inline-flex;
+        li{
+            list-style: none;
+            margin:10px;
+            .yushi-nav-bar__button{
+                color:#37474F;
+                border:5px dashed $theme-color;
+                &:hover{
+                    border:5px solid white;
+                    color:white;
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+    @include MQ(M){
+        .yushi-nav-bar-nav{
+            margin:auto;
+            left:55%;
+            li{
+                list-style: none;
+                margin:auto;
+                margin-bottom:10px;
+                .yushi-nav-bar__button{
+                    color:#37474F;
+                    border:0px;
+                    font-size:1.5em;
+                    padding:10px;
+                    &:hover{
+                        border:5px solid white;
+                        color:white;
+                        background-color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    @include MQ(S){
+        .yushi-nav-bar-nav{
+            margin:auto;
+            left:45%;
+        }
+    }
+}
+
+.main-card{
+    position: relative;
+    width:70%;
+    height: auto;
+    left:15%;
+    top:200px;
+    background: linear-gradient(179.9deg, $theme-color 0%, $theme-color 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, $theme-color 66.66%, $theme-color 99.99%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    text-align: center;
+    .main-card__avatar{
+        position:relative;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        bottom:80px;
+        margin:0 auto;
+        border:6px dashed $theme-color;
+        img{
+            width: 400px;
+            position: relative;
+            right: 60px;
+            bottom: 5px;
+        }
+    }
+    @include MQ(L){
+        .main-card__description{
+            margin:10px;
+        }
+    }
+    .main-card__title{
+        color:$theme-color;
+        padding:10px;
+        padding-top:0px;
+    }
+    @include MQ(S){
+        .main-card__title{
+            padding-top:55px;
+        }
+    }
+    .main-card__description{
+        padding-bottom:20px;
+        padding-top:60px;
+        color:white;
+    }
+}
+@include MQ(M){
+    .main-card{
+        width:90%;
+        left:5%;
+    }
+}
