@@ -1,0 +1,22 @@
+{
+    "projects" : [
+      { 
+        "title" : "Leonard Cohen",
+        "skills":["React","Redux"],
+        "short_description" : "1934",
+        "description":"1934"
+        },
+      { 
+        "title" : "Joe Satriani",
+        "skills":["React","Redux"],
+        "short_description" : "1956",
+        "description":"1934"
+        },
+      { 
+        "title" : "Snoop Dogg",
+        "skills":["React","Redux"],
+        "short_description" : "1971",
+        "description":"1934"
+        }
+    ]
+}

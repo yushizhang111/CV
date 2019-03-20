@@ -4,6 +4,21 @@
 /*********************
 color
 ***********************/
+body {
+  background: #ffd6e7;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: -2;
+}
+body svg {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  z-index: -1;
+}
+
 .yushi-nav-bar {
   float: right;
   margin-right: 20%;
@@ -11,7 +26,6 @@ color
 }
 .yushi-nav-bar .yushi-nav-bar-nav {
   position: relative;
-  left: 15%;
   top: 10%;
   display: inline-flex;
 }
@@ -22,13 +36,15 @@ color
 .yushi-nav-bar .yushi-nav-bar-nav li .yushi-nav-bar__button {
   color: #37474F;
   border: 5px dashed #37474F;
+  padding: 10px 20px;
 }
 .yushi-nav-bar .yushi-nav-bar-nav li .yushi-nav-bar__button:hover {
   border: 5px solid white;
+  border-radius: 50px;
   color: white;
   background-color: #37474F;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 940px) {
   .yushi-nav-bar .yushi-nav-bar-nav {
     margin: auto;
     left: 55%;
@@ -57,18 +73,37 @@ color
   }
 }
 
-.main-card {
+.pages {
+  height: 100%;
+}
+.pages #introduction {
+  background: rgba(0, 0, 0, 0);
+  height: auto;
+}
+.pages #introduction .main-card {
   position: relative;
   width: 70%;
   height: auto;
   left: 15%;
   top: 200px;
-  background: linear-gradient(179.9deg, #37474F 0%, #37474F 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #37474F 66.66%, #37474F 99.99%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  text-align: center;
+  margin-bottom: 200px;
 }
-.main-card .main-card__avatar {
+.pages #introduction .main-card:hover .card-content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+.pages #introduction .main-card .card-content {
+  background: rgba(225, 225, 225, 0.25);
+  box-shadow: 1px 4px 3px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.pages #introduction .main-card .card-content .front {
+  backface-visibility: hidden;
+}
+.pages #introduction .main-card .card-content .front .main-card__avatar {
   position: relative;
   border-radius: 50%;
   overflow: hidden;
@@ -78,37 +113,130 @@ color
   margin: 0 auto;
   border: 6px dashed #37474F;
 }
-.main-card .main-card__avatar img {
+.pages #introduction .main-card .card-content .front .main-card__avatar img {
   width: 400px;
   position: relative;
   right: 60px;
   bottom: 5px;
 }
 @media only screen and (max-width: 1200px) {
-  .main-card .main-card__description {
+  .pages #introduction .main-card .card-content .front .main-card__description {
     margin: 10px;
   }
 }
-.main-card .main-card__title {
+.pages #introduction .main-card .card-content .front .main-card__title {
   color: #37474F;
-  padding: 10px;
-  padding-top: 0px;
 }
 @media only screen and (max-width: 480px) {
-  .main-card .main-card__title {
+  .pages #introduction .main-card .card-content .front .main-card__title {
     padding-top: 55px;
   }
 }
-.main-card .main-card__description {
-  padding-bottom: 20px;
+.pages #introduction .main-card .card-content .front .main-card__description {
+  padding-bottom: 60px;
   padding-top: 60px;
   color: white;
+  font-size: 1.2em;
 }
-
+.pages #introduction .main-card .card-content .back {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  list-style: none;
+  font-size: 1.5em;
+  color: #37474F;
+}
+.pages #introduction .main-card .card-content .back li {
+  margin: 30px;
+}
+.pages #introduction .main-card .card-content .back li a:link {
+  color: #37474F;
+}
+.pages #introduction .main-card .card-content .back li a:hover {
+  color: white;
+}
+.pages #introduction .main-card .card-content .back li a:visited {
+  color: black;
+}
+.pages #introduction .main-card .card-content .back li a:visited:hover {
+  color: white;
+}
 @media only screen and (max-width: 769px) {
-  .main-card {
+  .pages #introduction .main-card {
     width: 90%;
     left: 5%;
+  }
+}
+.pages #resume .skill-card {
+  background: rgba(225, 225, 225, 0.25);
+  width: 80%;
+  margin: 100px auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  padding: 30px;
+  text-align: center;
+}
+.pages #resume .skill-card .tags {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding-left: 0px;
+  list-style: none;
+}
+.pages #resume .skill-card .tags .skill-tag {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  width: auto;
+  background-color: #37474F;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px;
+  padding: 5px 30px;
+  opacity: 0.8;
+}
+.pages #resume .project-card {
+  text-align: center;
+}
+.pages #resume .project-card .card_block {
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 5px;
+  margin: 5px auto;
+  width: 80%;
+}
+.pages #resume .education-card {
+  text-align: center;
+}
+.pages #resume .education-card .card_block {
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 5px;
+  margin: 5px auto;
+  width: 80%;
+}
+.pages #resume #top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #37474F;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+@media only screen and (max-width: 420px) {
+  .pages #resume #top-button {
+    font-size: 11px;
+    right: 10px;
   }
 }
 

@@ -18,50 +18,134 @@
             <div class="yushi-nav-bar collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="yushi-nav-bar-nav navbar-nav mr-auto">
                     <li class="nav-item">
-                        <button type="button" class="yushi-nav-bar__button nav-link  btn btn-outline-primary"><strong>Home</strong></button>
+                        <a href="#introduction"><button onclick="pageChange('#introduction')" type="button" class="yushi-nav-bar__button nav-link  btn btn-outline-primary home-link"><strong>Home</strong></button></a>
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="nav-link yushi-nav-bar__button btn btn-outline-primary"><strong>Resume</strong></button>
+                        <a href="#resume"><button onclick="pageChange('#resume')" type="button" class="nav-link yushi-nav-bar__button btn btn-outline-primary resume-link"><strong>Resume</strong></button></a>
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="nav-link yushi-nav-bar__button btn btn-outline-primary"><strong>Portfolio</strong></button>
+                        <a href="#portfolio"><button onclick="pageChange('#portfolio')" type="button" class="nav-link yushi-nav-bar__button btn btn-outline-primary portfolio-link"><strong>Portfolio</strong></button></a>
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="nav-link yushi-nav-bar__button btn btn-outline-primary"><strong>Others</strong></button>
+                        <a href="#contact"><button onclick="pageChange('#contact')" type="button" class="nav-link yushi-nav-bar__button btn btn-outline-primary contact-link"><strong>Contact</strong></button></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>  
-    <section id="introduction">
-        <div class="main-card">
-            <div class="main-card__avatar">
-                <img src="public/img/avatar.jpg" />
+    
+    <div class="pages">
+        <section class="page-view" id="introduction">
+            <div class="page-content">
+                <div class="main-card">
+                    <div class="card-content">
+                        <div class="front card-page">
+                            <div class="main-card__avatar">
+                                <img src="public/img/avatar.jpg" />
+                            </div>
+                            <div class="main-card__title">
+                                <h1><strong>Yushi Zhang</strong></h1>
+                                <h2><strong>Full Stack Developer</strong></h2>
+                            </div>
+                            <div class="main-card__description">
+                                <p>
+                                    <strong>Full Stack Developer in Jiangren Academy</strong>
+                                </p>
+                                <p>
+                                    <strong>Master of Information Technology in University of Queensland </strong>
+                                </p>
+                                <p>
+                                    <strong>Video Editor</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="back card-page">
+                            <h2>Links</h2>
+                            <li>
+                                <a href="https://learn.jiangren.com.au" target="_blank">JR Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="https://jiangren.com.au" target="_blank">JR Academy</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/yushi-zhang111/" target="_blank">My LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="/public/docs/doc.docx" download>Download my resume</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/yushizhang111" download>Github</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="main-card__title">
-                <h1>Yushi Zhang</h1>
-                <h2>Full Stack Developer</h2>
+        </section>
+        </section>
+        <section class="page-view" id="resume">
+            <div class="page-content">
+                <div class="skill-card">
+                    <h3>Front-End</h3>
+                    <ul class="front-end-skills tags">  
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Back-End</h3>
+                    <ul class="back-end-skills tags">  
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Language</h3>
+                    <ul class="language tags">  
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <ul class="tools tags">  
+                    </ul>
+                </div>
+                
+                
+                <div class="project-card">
+                    <h2><strong>Projects</strong></h2>
+                    <div class="card_block">
+                    </div>
+                    <div class="card_block">
+                    </div>
+                    <ul>
+                    </ul> 
+                </div>
+                <div class="education-card">
+                    <h2><strong>Education</strong></h2>
+                    <div class="card_block">
+                    </div>
+                    <div class="card_block">
+                    </div>
+                    <ul>
+                    </ul> 
+                </div>
+                <button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
             </div>
-            <div class="main-card__description">
-                <p>
-                    <strong>Full Stack Developer in Jiangren Academy</strong>
-                </p>
-                <p>
-                    <strong>Master of Information Technology in University of Queensland </strong>
-                </p>
-                <p>
-                    <strong>Video Editor</strong>
-                </p>
-            </div>
-        </div>
-    </section>
-    <footer>
+        </section>
+        <section class="page-view" id="portfolio">
 
-    </footer>
+        </section>
+        <section class="page-view" id="contact">
+            
+        </section>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+    <script src="/public/js/background.js"></script>
+    <script src="/public/js/main.js"></script>
 </body>
 </html>
