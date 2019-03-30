@@ -16,16 +16,13 @@ function pageChange(hash){
 	}
 	switch (hash) { 
 		case '#introduction':
-			$("body").css("background-color","#ffd6e7");
+			$("body").css("background-color","#8c8c8c");
 			break;
 		case '#resume': 
-			$("body").css("background-color","#ffbb96");
+			$("body").css("background-color","#d9d9d9");
 			break;
 		case '#portfolio': 
-			$("body").css("background-color","#efdbff");
-			break;
-		case '#contact': 
-			$("body").css("background-color","#b5f5ec");
+			$("body").css("background-color","#bfbfbf");
 			break;	
 	}
 	

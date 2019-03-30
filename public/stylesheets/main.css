@@ -19,6 +19,13 @@ body svg {
   z-index: -1;
 }
 
+header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+
 .yushi-nav-bar {
   float: right;
   margin-right: 20%;
@@ -237,6 +244,53 @@ body svg {
   .pages #resume #top-button {
     font-size: 11px;
     right: 10px;
+  }
+}
+.pages #contact {
+  position: relative;
+  top: 200px;
+  text-align: center;
+}
+.pages #contact .contact-card {
+  text-align: center;
+}
+.pages #contact .contact-card .card_block {
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 5px;
+  margin: 5px auto;
+  width: 80%;
+}
+.pages #contact .contact-card .contact-row {
+  clear: both;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.pages #contact .contact-card .contact-row img {
+  width: 30px;
+}
+.pages #contact .contact-card form {
+  font-size: 1.5em;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+}
+.pages #contact .contact-card form label {
+  float: left;
+}
+.pages #contact .contact-card form .btn {
+  background-color: #37474F;
+  border-color: #37474F;
+  float: right;
+}
+.pages #contact .contact-card form input, .pages #contact .contact-card form textarea, .pages #contact .contact-card form .btn {
+  border-radius: 20px;
+}
+@media only screen and (max-width: 420px) {
+  .pages #contact .contact-card form label {
+    float: none;
+  }
+  .pages #contact .contact-card form .btn {
+    float: none;
   }
 }
 

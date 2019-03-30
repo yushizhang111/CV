@@ -61,7 +61,12 @@ body{
 	
 }
 
-
+header{
+	position:fixed;
+	z-index:5;
+	width:100%;
+	top:0;
+}
 
 .yushi-nav-bar{
     float:right;
@@ -281,6 +286,54 @@ body{
 			#top-button{
 				font-size: 11px;
 				right:10px;
+			}
+		}
+	}
+	#contact{
+		position:relative;
+		top:200px;
+		text-align: center;
+		
+		.contact-card{
+			text-align: center;
+			.card_block{
+				border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+				padding-bottom: 5px;
+				margin: 5px auto;
+				width:80%;
+			}
+			.contact-row{
+				clear:both;
+				margin-top:50px;
+				margin-bottom:50px;
+				img{
+					width:30px;
+				}
+			}
+			form{
+				font-size:1.5em;
+				width:60%;
+				margin:auto;
+				margin-top:50px;
+				label{
+					float: left;
+				}
+				.btn{
+					background-color: $theme-color;
+					border-color: $theme-color;
+					float:right;
+				}
+				input,textarea,.btn{
+					border-radius:20px;
+				}
+				@include MQ(XS){
+					label{
+						float:none;
+					}
+					.btn{
+						float:none;
+					}
+				}
 			}
 		}
 	}
