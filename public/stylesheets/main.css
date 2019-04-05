@@ -5,7 +5,7 @@
 color
 ***********************/
 body {
-  background: #ffd6e7;
+  background: #8c8c8c;
   width: auto;
   height: 100%;
   margin: 0;
@@ -121,10 +121,10 @@ header {
   border: 6px dashed #37474F;
 }
 .pages #introduction .main-card .card-content .front .main-card__avatar img {
-  width: 400px;
+  width: 200px;
   position: relative;
-  right: 60px;
-  bottom: 5px;
+  left: 0px;
+  bottom: 20px;
 }
 @media only screen and (max-width: 1200px) {
   .pages #introduction .main-card .card-content .front .main-card__description {
@@ -171,13 +171,24 @@ header {
 .pages #introduction .main-card .card-content .back li a:visited:hover {
   color: white;
 }
+.pages #introduction .main-card .card-content .back .contact {
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.pages #introduction .main-card .card-content .back .contact img {
+  width: 30px;
+  margin: 10px;
+}
 @media only screen and (max-width: 769px) {
   .pages #introduction .main-card {
     width: 90%;
     left: 5%;
   }
 }
-.pages #resume .skill-card {
+.pages #skill-tool .skill-card {
+  top: 200px;
+  position: relative;
   background: rgba(225, 225, 225, 0.25);
   width: 80%;
   margin: 100px auto;
@@ -185,8 +196,13 @@ header {
   border-radius: 50px;
   padding: 30px;
   text-align: center;
+  transition: top 0.3s;
 }
-.pages #resume .skill-card .tags {
+.pages #skill-tool .skill-card:hover {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  top: 190px;
+}
+.pages #skill-tool .skill-card .tags {
   width: 100%;
   display: inline-flex;
   flex-flow: row wrap;
@@ -194,7 +210,7 @@ header {
   padding-left: 0px;
   list-style: none;
 }
-.pages #resume .skill-card .tags .skill-tag {
+.pages #skill-tool .skill-card .tags .skill-tag {
   text-align: center;
   font-size: 1.2em;
   padding: 5px;
@@ -207,25 +223,7 @@ header {
   padding: 5px 30px;
   opacity: 0.8;
 }
-.pages #resume .project-card {
-  text-align: center;
-}
-.pages #resume .project-card .card_block {
-  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
-  padding-bottom: 5px;
-  margin: 5px auto;
-  width: 80%;
-}
-.pages #resume .education-card {
-  text-align: center;
-}
-.pages #resume .education-card .card_block {
-  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
-  padding-bottom: 5px;
-  margin: 5px auto;
-  width: 80%;
-}
-.pages #resume #top-button {
+.pages #skill-tool #top-button {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -241,57 +239,67 @@ header {
   font-size: 18px;
 }
 @media only screen and (max-width: 420px) {
-  .pages #resume #top-button {
+  .pages #skill-tool #top-button {
     font-size: 11px;
     right: 10px;
   }
 }
-.pages #contact {
-  position: relative;
+.pages #portfolio .project-card {
   top: 200px;
+  position: relative;
   text-align: center;
 }
-.pages #contact .contact-card {
-  text-align: center;
-}
-.pages #contact .contact-card .card_block {
+.pages #portfolio .project-card .card_block {
   border-bottom: 5px solid rgba(0, 0, 0, 0.5);
   padding-bottom: 5px;
   margin: 5px auto;
   width: 80%;
 }
-.pages #contact .contact-card .contact-row {
-  clear: both;
-  margin-top: 50px;
-  margin-bottom: 50px;
+.pages #portfolio .project-card .it-projects, .pages #portfolio .project-card .other-projects {
+  width: 90%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  padding-left: 0px;
+  list-style: none;
 }
-.pages #contact .contact-card .contact-row img {
-  width: 30px;
+.pages #portfolio .project-card .it-projects .project_card, .pages #portfolio .project-card .other-projects .project_card {
+  width: 80%;
+  background: rgba(225, 225, 225, 0.25);
+  margin: 30px auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
 }
-.pages #contact .contact-card form {
-  font-size: 1.5em;
-  width: 60%;
-  margin: auto;
-  margin-top: 50px;
+.pages #portfolio .project-card .it-projects .project_card .project_skills, .pages #portfolio .project-card .other-projects .project_card .project_skills {
+  width: 80%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding-left: 0px;
+  list-style: none;
 }
-.pages #contact .contact-card form label {
-  float: left;
-}
-.pages #contact .contact-card form .btn {
+.pages #portfolio .project-card .it-projects .project_card .project_skills .project_skill, .pages #portfolio .project-card .other-projects .project_card .project_skills .project_skill {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  width: auto;
   background-color: #37474F;
-  border-color: #37474F;
-  float: right;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px;
+  padding: 5px 30px;
+  opacity: 0.8;
 }
-.pages #contact .contact-card form input, .pages #contact .contact-card form textarea, .pages #contact .contact-card form .btn {
-  border-radius: 20px;
+.pages #portfolio .education-card {
+  text-align: center;
 }
-@media only screen and (max-width: 420px) {
-  .pages #contact .contact-card form label {
-    float: none;
-  }
-  .pages #contact .contact-card form .btn {
-    float: none;
-  }
+.pages #portfolio .education-card .card_block {
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 5px;
+  margin: 5px auto;
+  width: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */

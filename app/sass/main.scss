@@ -46,7 +46,7 @@ $theme-color:#37474F;
 	}
 }
 body{
-	background: #ffd6e7;
+	background: #8c8c8c;
 	width: auto;
 	height: 100%;
 	margin: 0;
@@ -156,10 +156,10 @@ header{
 						margin:0 auto;
 						border:6px dashed $theme-color;
 						img{
-							width: 400px;
+							width: 200px;
 							position: relative;
-							right: 60px;
-							bottom: 5px;
+							left: 0px;
+							bottom: 20px;
 						}
 					}
 					@include MQ(L){
@@ -207,6 +207,15 @@ header{
 							}
 						}
 					}
+					.contact{
+						display: inline-flex;
+						flex-flow: row wrap;
+						align-items: center;
+						img{
+							width:30px;
+							margin:10px;
+						}
+					}
 				}
 			}
 		}
@@ -218,8 +227,11 @@ header{
 		}
 	}
 
-	#resume{
+	#skill-tool{
+		
 		.skill-card{
+			top:200px;
+			position:relative;
 			background:rgba(225, 225, 225, 0.25);
 			width:80%;
 			margin:100px auto;
@@ -227,6 +239,11 @@ header{
 			border-radius: 50px;
 			padding:30px;
 			text-align: center;
+			transition: top 0.3s;
+			&:hover{
+				box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+				top:190px;
+			}
 			.tags {
 				width: 100%;
 				display: inline-flex;
@@ -249,24 +266,7 @@ header{
 				}
 			}
 		}
-		.project-card{
-			text-align: center;
-			.card_block{
-				border-bottom: 5px solid rgba(0, 0, 0, 0.5);
-				padding-bottom: 5px;
-				margin: 5px auto;
-				width:80%;
-			}
-		}
-		.education-card{
-			text-align: center;
-			.card_block{
-				border-bottom: 5px solid rgba(0, 0, 0, 0.5);
-				padding-bottom: 5px;
-				margin: 5px auto;
-				width:80%;
-			}
-		}
+		
 		#top-button{
 			display: none; 
 			position: fixed; 
@@ -289,12 +289,11 @@ header{
 			}
 		}
 	}
-	#contact{
-		position:relative;
-		top:200px;
-		text-align: center;
+	#portfolio{
 		
-		.contact-card{
+		.project-card{
+			top:200px;
+			position:relative;
 			text-align: center;
 			.card_block{
 				border-bottom: 5px solid rgba(0, 0, 0, 0.5);
@@ -302,38 +301,51 @@ header{
 				margin: 5px auto;
 				width:80%;
 			}
-			.contact-row{
-				clear:both;
-				margin-top:50px;
-				margin-bottom:50px;
-				img{
-					width:30px;
+			.it-projects,.other-projects{
+				width: 90%;
+				display: inline-flex;
+				flex-flow: row wrap;
+				padding-left:0px;
+				list-style: none;
+				.project_card{
+					width:80%;
+					background:rgba(225, 225, 225, 0.25);
+					margin:30px auto;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+					border-radius: 50px;
+					padding:20px;
+					text-align: center;
+					.project_skills{
+						width: 80%;
+						display: inline-flex;
+						flex-flow: row wrap;
+						justify-content: space-evenly;
+						padding-left:0px;
+						list-style: none;
+						.project_skill{
+							text-align: center;
+							font-size: 1.2em;
+							padding: 5px;
+							width: auto;
+							background-color:$theme-color;
+							color:white;
+							border-radius: 50px;
+							box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+							margin:20px;
+							padding:5px 30px;
+							opacity:0.8;
+						}
+					}
 				}
 			}
-			form{
-				font-size:1.5em;
-				width:60%;
-				margin:auto;
-				margin-top:50px;
-				label{
-					float: left;
-				}
-				.btn{
-					background-color: $theme-color;
-					border-color: $theme-color;
-					float:right;
-				}
-				input,textarea,.btn{
-					border-radius:20px;
-				}
-				@include MQ(XS){
-					label{
-						float:none;
-					}
-					.btn{
-						float:none;
-					}
-				}
+		}
+		.education-card{
+			text-align: center;
+			.card_block{
+				border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+				padding-bottom: 5px;
+				margin: 5px auto;
+				width:80%;
 			}
 		}
 	}

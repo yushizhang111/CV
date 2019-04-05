@@ -18,7 +18,7 @@ function pageChange(hash){
 		case '#introduction':
 			$("body").css("background-color","#8c8c8c");
 			break;
-		case '#resume': 
+		case '#skill-tool': 
 			$("body").css("background-color","#d9d9d9");
 			break;
 		case '#portfolio': 
@@ -46,19 +46,72 @@ $(document).ready(function(){
 
 	/*skills*/
 
-	const front_end_skills = ["React", "Redux", "Redux-saga", "Pug(Jade)", "HTML", "CSS", "SCSS", "LESS", "Bootstrap", "ElementUI","Javascipt", "JQuery"]
-	const back_end_skills = ["Node.js", "PHP","Mongodb", "Mongoosejs", "RESTful API", "express.js", "sql"]
+	const front_end_skills = ["React.js", "Redux", "Redux-Saga", "Vue.js", "Angular", "Html", "Pug(Jade)", "CSS", "Scss", "Sass", "Less", "JavaScript", "jQuery", "TypeScript", "C#"]
+	const back_end_skills = ["Node.js", "mongoosejs", "MongoDB", "RESTful API", "expressjs", "SQL", "PHP", "Mongo Compass", "Postman", "Swagger UI"]
+	const framework = ["KeystoneJS", "Laravel"]
+	const machine_learning =[ "text mining", "simple NLP methods (trigger terms)", "Spyder", "Jupyter notebook", "Matlab", "Weka", "TensorFlow"]
 	const language = ["JAVA", "Python"]
-	const tools = ["Matlab", "Tensorflow", "Weka", "Jupyter notebook", "Figma", "Zeplin", "Photoshop", "Adobe pr cc", "Adobe Effects", "Adobe Illustration", "InDesign"]
+	const ui = ["Bootstrap", "Materialize", "ElementUI", "semantic-ui", "pro.ant.design", "Figma", "Sketch", "Zeplin", "Photoshop", "Adobe Illustration"]
+	const seo = ["seo"]
+	const cloud_platform = ["heroku", "aws", "MongoDB Atlas"]
+	const project_management = ["Agile", "Scrum", "Git", "Github", "Jira", "Bitbucket"]
+
+	const other = ["Google Map API", "Leaflet"]
 	
 	listTags(".front-end-skills",front_end_skills);
 	listTags(".back-end-skills",back_end_skills);
+	listTags(".framework",framework);
+	listTags(".machine-learning",machine_learning);
 	listTags(".language",language);
-	listTags(".tools",tools);
+	listTags(".ui",ui);
+	listTags(".seo",seo);
+	listTags(".cloud-platform",cloud_platform);
+	listTags(".project-management",project_management);
+	listTags(".other",other);
 	pageChange(location.hash);
 
 	window.onscroll = function() {scrollFunction()};
 
-	
+	$.ajax({
+		url: "/public/json/project.json",
+		dataType: "json",
+		success: function (data) {	
+			// Process your JSON data here
+			data.it_projects.map(project => {
+				$(".it-projects").append(
+					$('<div class="project_card" >').append(
+						$('<h2 class="project_title" >').text(project.title),
+						$("<ul class='project_skills "+project.id+"' >"),
+						$('<div>').append(
+							project.short_description?$('<a class="project_shortDescription">').attr("href",project.short_description):null,
+						)
+					)
+				)
+				project.skills.map(skill=>{
+					$("."+project.id).append(
+						$('<li class="project_skill">').text(skill),
+					)
+				})
+
+					
+			})
+			data.other_projects.map(project => {
+				$(".other-projects").append(
+					$('<div class="project_card" >').append(
+						$('<h2 class="project_title" >').text(project.title),
+						$("<ul class='project_skills "+project.id+"' >"),
+						project.short_description?$('<a class="project_shortDescription">').attr("href",project.short_description):null,
+					)
+				)
+				project.skills.map(skill=>{
+					$("."+project.id).append(
+						$('<li class="project_skill">').text(skill),
+					)
+				})
+			})	
+			$('.project_shortDescription').text("Link to the Website")
+		}
+	});
+
 });
   
