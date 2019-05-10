@@ -223,6 +223,11 @@ header {
   padding: 5px 30px;
   opacity: 0.8;
 }
+@media only screen and (max-width: 940px) {
+  .pages #skill-tool .skill-card .tags .skill-tag {
+    font-size: 0.7em;
+  }
+}
 .pages #skill-tool #top-button {
   display: none;
   position: fixed;
@@ -291,6 +296,11 @@ header {
   margin: 20px;
   padding: 5px 30px;
   opacity: 0.8;
+}
+@media only screen and (max-width: 940px) {
+  .pages #portfolio .project-card .it-projects .project_card .project_skills .project_skill, .pages #portfolio .project-card .other-projects .project_card .project_skills .project_skill {
+    font-size: 0.7em;
+  }
 }
 .pages #portfolio .education-card {
   text-align: center;

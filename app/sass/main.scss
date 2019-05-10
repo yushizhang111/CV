@@ -264,6 +264,11 @@ header{
 					padding:5px 30px;
 					opacity:0.8;
 				}
+				@include MQ(ML){
+					.skill-tag{
+						font-size: 0.7em;
+					}
+				}
 			}
 		}
 		
@@ -334,6 +339,11 @@ header{
 							margin:20px;
 							padding:5px 30px;
 							opacity:0.8;
+						}
+						@include MQ(ML){
+							.project_skill{
+								font-size: 0.7em;
+							}
 						}
 					}
 				}
