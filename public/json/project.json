@@ -23,27 +23,34 @@
 		},
 		{ 
 			"id":4,
+			"title" : "JR People--Leave management",
+			"skills":["React.js", "Redux-Saga", "Node.js", "JavaScript", "mongoosejs", "Less", "KeystoneJs", "Bootstrap", "pro.ant.design", "RESTful API", "AWS S3"],
+			"short_description" : "http://jr-eleave.s3-website-ap-southeast-2.amazonaws.com",
+			"description":""
+		},
+		{ 
+			"id":5,
 			"title" : "Razzledazzle",
 			"skills":["Wix"],
 			"short_description" : "https://www.razzledazzle.company/",
 			"description":""
 		},
 		{ 
-			"id":5,
+			"id":6,
 			"title" : "Queensland Government Climate Change",
 			"skills":["Html", "CSS", "Javascript", "Google Map API", "Leaflet", "D3.js", "pdfmake"],
 			"short_description" : "https://paddle-qld-climate.herokuapp.com/",
 			"description":""
 		},
 		{ 
-			"id":6,
+			"id":7,
 			"title" : "Aboriginal words learning system",
 			"skills":["Html", "CSS", "Javascript", "Speech-to-Text API", "swiper.js"],
 			"short_description" : "https://dream-time.herokuapp.com/",
 			"description":""
 		},
 		{ 
-			"id":7,
+			"id":8,
 			"title" : "Checking pathology results in an emergency department: An IT solution to support patient safety and increase efficiency",
 			"skills":["Text Mining","Python","Spyder", "Jupyter Notebook"],
 			"short_description" : "",

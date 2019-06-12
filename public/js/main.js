@@ -53,7 +53,7 @@ $(document).ready(function(){
 	const language = ["JAVA", "Python"]
 	const ui = ["Bootstrap", "Materialize", "ElementUI", "semantic-ui", "pro.ant.design", "Figma", "Sketch", "Zeplin", "Photoshop", "Adobe Illustration"]
 	const seo = ["seo"]
-	const cloud_platform = ["heroku", "aws", "MongoDB Atlas"]
+	const cloud_platform = ["heroku", "AWS S3", "MongoDB Atlas"]
 	const project_management = ["Agile", "Scrum", "Git", "Github", "Jira", "Bitbucket"]
 
 	const other = ["Google Map API", "Leaflet"]
