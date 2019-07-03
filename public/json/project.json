@@ -11,7 +11,7 @@
 			"id":2,
 			"title" : "JR Dashboard",
 			"skills":["React.js", "Redux-Saga", "Node.js", "JavaScript", "mongoosejs", "Less", "KeystoneJs", "Bootstrap", "pro.ant.design", "RESTful API"],
-			"short_description" : "learn.jiangren.com.au",
+			"short_description" : "https://learn.jiangren.com.au",
 			"description":""
 		},
 		{ 
